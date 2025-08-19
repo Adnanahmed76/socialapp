@@ -8,6 +8,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+ 
   Future<void> _navigateTotext()async{
     await Future.delayed(Duration(seconds: 5));
     final prefs= await SharedPreferences.getInstance();
@@ -30,6 +31,12 @@ class _SplashScreenState extends State<SplashScreen> {
     }
   }
 
+@override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _navigateTotext();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
